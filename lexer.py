@@ -2,6 +2,7 @@ import re
 
 from models import Token
 
+from lexerRules import rules
 
 class LexerError(Exception):
     """ Lexer error exception.
@@ -10,17 +11,6 @@ class LexerError(Exception):
     """
     def __init__(self, pos):
          Exception.__init__(self,"Lexer error at position {}".format(pos)) 
-
-rules = [
-    ('\++', 'INCREMENT'),
-    ('\-+', 'DECREMENT'),
-    ('\>+', 'INCREMENT_POINTER'),
-    ('\<+', 'DECREMENT_POINTER'),
-    ('\.',  'OUTPUT'),
-    ('\,',  'INPUT'),
-    ('\[',  'LOOP_OPEN'),
-    ('\]',  'LOOP_CLOSE'),
-]
 
 """
     > 	increment the data pointer (to point to the next cell to the right).

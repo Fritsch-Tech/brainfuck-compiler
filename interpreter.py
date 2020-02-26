@@ -2,10 +2,10 @@ from ASTModels import Node
 
 memory_size = 30000
 
-def execute(programm: [Node]) -> ([int],int):
+def execute(ast: [Node]) -> ([int],int):
     memory = [0]*memory_size
     mp = 0
-    for node in programm:
+    for node in ast:
         memory, mp = _evaluate(node,memory,mp)
 
     print()
