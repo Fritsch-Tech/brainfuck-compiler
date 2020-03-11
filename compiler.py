@@ -15,6 +15,7 @@ c_imp = {
     'OUTPUT':'putchar(mem[p]);',
     'INPUT':'mem[p] = getchar();',
     'LOOP':'while(mem[p]){{{body}}}',
+    'CLEAR':'mem[p] = 0;',
 }
 
 base_c = "#include <stdio.h>\nint main(){{int mem[30000];int p; {body}return 0;}}"

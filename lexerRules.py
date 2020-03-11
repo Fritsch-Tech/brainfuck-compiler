@@ -4,6 +4,10 @@
             (regex,tokenname)
         ]
 """
+optimised_rules = [
+    ('\[-]', 'CLEAR'),
+]
+
 rules = [
     ('\++', 'INCREMENT'),
     ('\-+', 'DECREMENT'),
